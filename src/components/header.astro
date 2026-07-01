@@ -1,0 +1,177 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<div class="announcement-bar">
+  🍮 Postre del día: Flan de vainilla con caramelo — ¡Pídelo hoy!
+</div>
+
+<header class="main-header">
+  <div class="header-container">
+    <a href="/" class="logo">
+      <span class="logo-break">Break</span><span class="logo-cookies">Cookies</span>
+    </a>
+
+    <div class="search-wrapper">
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" class="search-input" placeholder="Buscar en el menú..." />
+    </div>
+
+    <nav class="nav-links">
+      <a href="/" class:list={['nav-link', { active: currentPath.replace(/\/$/, '') === '' || currentPath === '/' }]}>Inicio</a>
+      <a href="/about" class:list={['nav-link', { active: currentPath === '/about' }]}>Nosotros</a>
+      <a href="/blog" class:list={['nav-link', { active: currentPath.startsWith('/blog') }]}>Blog</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="/contact" class="cta cta-outline">Contactar</a>
+      <a href="/menu" class="cta cta-primary">Ver Menú</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .announcement-bar {
+    background-color: var(--color-green);
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 8px 16px;
+    line-height: 1.4;
+  }
+
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    border-top: 1px solid var(--color-gray);
+    border-bottom: 1px solid var(--color-gray);
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .logo-break {
+    color: var(--color-green);
+  }
+
+  .logo-cookies {
+    color: var(--color-orange);
+  }
+
+  .search-wrapper {
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: #999;
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 220px;
+    padding: 8px 12px 8px 36px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--color-gray);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    outline: none;
+  }
+
+  .search-input::placeholder {
+    color: #999;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: background-color 200ms ease;
+  }
+
+  .nav-link:hover {
+    background-color: var(--color-gray);
+  }
+
+  .nav-link.active {
+    background-color: transparent;
+    color: var(--color-green);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .cta {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 8px 20px;
+    border-radius: 999px;
+    transition: all 200ms ease;
+    white-space: nowrap;
+  }
+
+  .cta-outline {
+    border: 2px solid var(--color-green);
+    color: var(--color-green);
+    background: transparent;
+  }
+
+  .cta-outline:hover {
+    background-color: var(--color-green);
+    color: #fff;
+  }
+
+  .cta-primary {
+    background-color: var(--color-orange);
+    color: #fff;
+    border: 2px solid var(--color-orange);
+  }
+
+  .cta-primary:hover {
+    filter: brightness(0.9);
+  }
+</style>

@@ -1,7 +1,8 @@
 ---
-const pageTitle = "Nosotros";
+const pageTitle = "Nosotros - BreakCookies";
 import '../styles/global.css'
-import Navigation from '../components/navigation.astro'
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro';
 ---
 
 <html lang="en">
@@ -15,8 +16,11 @@ import Navigation from '../components/navigation.astro'
 	</head>
 
 	<body>
-    	<Navigation />
-		<h1>Sobre Nosotros</h1>
-		<p>Lorem ipsum dolor sit amet conceptetur</p>
+    	<Header />
+		<main>
+			<h1>Sobre Nosotros</h1>
+			<p style="text-align: center; margin-top: 16px; max-width: 640px; margin-left: auto; margin-right: auto;">En BreakCookies llevamos más de 10 años endulzando la vida de nuestros clientes. Nuestra pasión por la repostería artesanal y los ingredientes de temporada nos ha convertido en un referente local.</p>
+		</main>
+		<Footer />
 	</body>
 </html>

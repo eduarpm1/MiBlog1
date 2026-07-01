@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
-import Navigation from '../components/navigation.astro'
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro';
 
 ---
 
@@ -11,11 +12,28 @@ import Navigation from '../components/navigation.astro'
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>BreakCookies - Inicio</title>
 	</head>
 	<body>
-		<Navigation />
-		<h1>Mi Primer Blog con Astro</h1>
-		<p>Lorem ipsum dolor sit amet conceptetur</p>
+		<Header />
+		<main>
+			<h1>Bienvenidos a BreakCookies</h1>
+			<p style="text-align: center; margin-top: 16px;">Repostería artesanal hecha con amor</p>
+			<section style="margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+				<div style="background: var(--color-gray); border-radius: 12px; padding: 24px; text-align: center;">
+					<h3 style="color: var(--color-orange);">🥐 Repostería</h3>
+					<p style="margin-top: 8px; font-size: 0.9rem;">Croissants, galletas y brownies horneados cada mañana</p>
+				</div>
+				<div style="background: var(--color-gray); border-radius: 12px; padding: 24px; text-align: center;">
+					<h3 style="color: var(--color-orange);">☕ Cafetería</h3>
+					<p style="margin-top: 8px; font-size: 0.9rem;">Café de especialidad y bebidas artesanales</p>
+				</div>
+				<div style="background: var(--color-gray); border-radius: 12px; padding: 24px; text-align: center;">
+					<h3 style="color: var(--color-orange);">🍮 Postres</h3>
+					<p style="margin-top: 8px; font-size: 0.9rem;">Postres caseros con ingredientes frescos</p>
+				</div>
+			</section>
+		</main>
+		<Footer />
 	</body>
 </html>

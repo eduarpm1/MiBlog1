@@ -1,0 +1,47 @@
+---
+import '../styles/global.css'
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Menú - BreakCookies</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Nuestro Menú</h1>
+      <section style="margin-top: 32px;">
+        <h2 style="color: var(--color-orange); margin-bottom: 16px;">🥐 Repostería</h2>
+        <ul>
+          <li><strong>Croissant de chocolate</strong> – Masa hojaldrada con chocolate belga</li>
+          <li><strong>Cookie clásica</strong> – Chips de chocolate, nueces y toque de sal marina</li>
+          <li><strong>Cookie red velvet</strong> – Crema de queso y chips de chocolate blanco</li>
+          <li><strong>Brownie artesanal</strong> – Doble cacao, nueces y frosting de vainilla</li>
+        </ul>
+
+        <h2 style="color: var(--color-orange); margin: 24px 0 16px;">☕ Bebidas</h2>
+        <ul>
+          <li><strong>Café latte</strong> – Espresso doble con leche vaporizada</li>
+          <li><strong>Capuchino</strong> – Espresso, leche y espuma cremosa</li>
+          <li><strong>Chocolate caliente</strong> – Chocolate suizo con crema batida</li>
+          <li><strong>Smoothie de frutos rojos</strong> – Yogurt natural, fresas y arándanos</li>
+        </ul>
+
+        <h2 style="color: var(--color-orange); margin: 24px 0 16px;">🍮 Postres</h2>
+        <ul>
+          <li><strong>Flan de vainilla</strong> – Caramelo casero y nata montada</li>
+          <li><strong>Cheesecake neoyorquino</strong> – Base de galleta y coulis de frutos rojos</li>
+          <li><strong>Tiramisú</strong> – Mascarpone, café expreso y cacao amargo</li>
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

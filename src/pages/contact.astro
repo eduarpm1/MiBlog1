@@ -1,0 +1,50 @@
+---
+import '../styles/global.css'
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Contacto - BreakCookies</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Contacta con nosotros</h1>
+      <section style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+        <div>
+          <h2 style="color: var(--color-orange); margin-bottom: 12px;">📍 Dirección</h2>
+          <p>Calle de los Postres, 42</p>
+          <p>28001 Madrid</p>
+
+          <h2 style="color: var(--color-orange); margin: 24px 0 12px;">📞 Teléfono</h2>
+          <p>+34 123 456 789</p>
+
+          <h2 style="color: var(--color-orange); margin: 24px 0 12px;">✉️ Email</h2>
+          <p>hola@breakcookies.com</p>
+
+          <h2 style="color: var(--color-orange); margin: 24px 0 12px;">🕒 Horario</h2>
+          <p>Lunes a viernes: 8:00 – 21:00</p>
+          <p>Sábados: 9:00 – 22:00</p>
+          <p>Domingos: 10:00 – 15:00</p>
+        </div>
+        <div style="background-color: var(--color-gray); border-radius: 12px; padding: 24px;">
+          <h2 style="color: var(--color-orange); margin-bottom: 16px;">Envíanos un mensaje</h2>
+          <form style="display: flex; flex-direction: column; gap: 12px;">
+            <input type="text" placeholder="Nombre" style="padding: 10px; border: none; border-radius: 8px; font-family: 'Montserrat', sans-serif;" />
+            <input type="email" placeholder="Email" style="padding: 10px; border: none; border-radius: 8px; font-family: 'Montserrat', sans-serif;" />
+            <textarea placeholder="Mensaje" rows="4" style="padding: 10px; border: none; border-radius: 8px; font-family: 'Montserrat', sans-serif; resize: vertical;"></textarea>
+            <button type="submit" style="background-color: var(--color-orange); color: #fff; border: none; padding: 10px; border-radius: 999px; font-weight: 600; font-family: 'Montserrat', sans-serif; cursor: pointer;">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
