@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css'
+import Navigation from '../components/navigation.astro'
+
 ---
 
 <html lang="en">
@@ -12,12 +14,7 @@ import '../styles/global.css'
 		<title>Astro</title>
 	</head>
 	<body>
-		<nav>
-			<a href="/">Inicio</a>
-			<a href="/about">Nosotros</a>
-			<a href="/blog">Blog</a>
-		</nav>
-
+		<Navigation />
 		<h1>Mi Primer Blog con Astro</h1>
 		<p>Lorem ipsum dolor sit amet conceptetur</p>
 	</body>
