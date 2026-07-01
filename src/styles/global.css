@@ -22,3 +22,13 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+
+ul li {
+
+list-style-type: none;
+margin: 20px 0 5px 0;
+padding: 10px;
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
